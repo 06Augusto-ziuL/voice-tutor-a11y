@@ -216,3 +216,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+assets/piper_model/
+*.wav
+*.mp3
+.env
