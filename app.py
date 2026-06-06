@@ -1,6 +1,7 @@
 import gradio as gr
 from core.llm_client import perguntar
 from core.tts_engine import sintetizar_voz
+from core.styles import CSS
 
 def responder(pergunta: str, historico:list):
     resposta = perguntar(pergunta, historico)
@@ -17,9 +18,26 @@ with gr.Blocks() as app:
     
     gr.ChatInterface(
         fn=responder,
-        title="\U0001F393 Papoi - Tutor Escolar Acessível por Voz",
+        title="&#127891; Papoi - Tutor Escolar Acessível por Voz",
+        description="Seu tutor escolar inteligente, sempre pronto para ajudar.",
+        chatbot=gr.Chatbot(
+            placeholder="""<div style='text-align:center'>
+        <p style='font-size:3rem'>&#127891;</p>
+        <h2>Olá! &#x1F44B</h2>
+        <p>Sou o Papoi, seu tutor escolar por voz.</p>
+        <p>Como posso te ajudar hoje?</p>
+        </div>""",
+            show_label=False,
+            render_markdown=True
+        ),
+        examples=[
+            "Explicar um conteúdo",
+            "Resolver exercício",
+            "Revisar texto",
+            "Tirar dúvida"
+        ],
         additional_outputs=[audio_output]
     )
 
 if __name__ == "__main__":
-    app.launch()
+    app.launch(theme=None, css=CSS)
