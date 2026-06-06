@@ -16,6 +16,7 @@ CSS = """
 
 [data-testid="submit-button"]:hover {
     background-color: #6d28d9 !important;
+    border-radius: 10px
 }
 
 button.example {
@@ -41,5 +42,18 @@ button.example:hover {
 [data-testid="textbox"] {
     background-color: #12152b !important;
     color: #e2e8f0 !important;
+}
+
+#btn_toggle {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+    background: #1e2035 !important;
+    border: 1px solid #2a2d4a !important;
+    border-radius: 10px !important;
+    width: 2rem !important;
+    height: 2rem !important;
+    padding: 0 !important;
 }
 """
