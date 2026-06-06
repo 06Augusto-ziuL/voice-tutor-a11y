@@ -1,7 +1,17 @@
+import re
 import subprocess
 from core.config import PIPER_MODEL, PIPER_CONFIG, PIPER_LENGTH_SCALE, PIPER_SENTENCE_SILENCE,AUDIO_OUTPUT
 
+def limpar_markdown(texto: str) -> str:
+    texto = re.sub(r'\*+', '', texto)
+    texto = re.sub(r'#+\s*', '', texto)
+    texto = re.sub(r'\[([^\]]+)\]\([^\)]+\)', r'\1', texto)
+    texto = re.sub(r'`+', '', texto)
+    return texto.strip()
+
+
 def sintetizar_voz(texto: str) -> str:
+    texto = limpar_markdown(texto)
     comando = [
         "piper",
         "-m", str(PIPER_MODEL),

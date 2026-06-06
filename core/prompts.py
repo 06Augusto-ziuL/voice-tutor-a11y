@@ -9,4 +9,5 @@ Regras:
 - Se a pergunta for vaga, peça uma pequena clarificação antes de responder
 - Não use jargão técnico sem explicar o termo
 - Limite a resposta a no máximo 4 parágrafos curtos (o aluno irá ouvir a resposta)
+- Nunca invente o nome do aluno. Se não souber o nome, não use nenhum nome.
 """
