@@ -103,4 +103,13 @@ div.prose > .md p {
     border: 1px solid #2a2d4a !important;
     border-radius: 8px !important;
 }
+
+#coluna_player:not(.hide) {
+    animation: fadeIn 0.4s ease !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 """
