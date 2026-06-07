@@ -1,5 +1,7 @@
 # 🎓 Papoi — Tutor Escolar Acessível por Voz
 
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
+
 > Projeto final da disciplina de Inteligência Artificial — ADS/IFPB  
 > Professor: Rodolfo Bolconte
 
@@ -129,16 +131,7 @@ voice-tutor-a11y/
 
 ## Status do projeto
 
-Este projeto está em desenvolvimento ativo como trabalho acadêmico.
-
-| Módulo | Status |
-|--------|--------|
-| LLM (`llm_client.py`) | ✅ Completo |
-| TTS (`tts_engine.py`) | ✅ Completo |
-| Interface Gradio (`app.py`) | ✅ Completo |
-| STT (`stt_engine.py`) | 🔄 Em desenvolvimento |
-| Artigo acadêmico | 🔄 Em desenvolvimento |
-| Avaliação comparativa | 🔄 Pendente |
+> ⚠️ **Projeto em desenvolvimento ativo** — a interface, os prompts e os módulos estão em modificação constante. A versão atual pode estar instável.
 
 ---
 
