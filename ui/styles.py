@@ -10,6 +10,29 @@ CSS = """
     --border-color-primary: #2a2d4a !important;
 }
 
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #12152b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #7c3aed;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6d28d9;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #7c3aed #12152b;
+}
+
 body {
     height: 100vh;
     width: 100%;
@@ -94,7 +117,7 @@ div.prose > .md p {
     height: 100% !important;
     transition: flex-grow 0.3s ease, opacity 0.3s ease !important;
     opacity: 1;
-    border: 3px solid #7c3aed;
+    border: 2px solid #2a2d4a;
     border-radius: 10px;
     padding: 10px;
 }
@@ -111,5 +134,14 @@ div.prose > .md p {
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+[aria-label="Baixar"],
+[aria-label="Compartilhar"] {
+    display: none !important;
+}
+
+.timestamps {
+    margin-top: 12px !important;
 }
 """
