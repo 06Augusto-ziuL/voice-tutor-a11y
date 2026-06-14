@@ -221,3 +221,8 @@ assets/piper_model/
 *.wav
 *.mp3
 .env
+
+resultado_*.txt
+
+tests/.env
+tests/resultados/

@@ -2,11 +2,11 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-OLLAMA_MODEL = "qwen2.5:3b"
+OLLAMA_MODEL = "papoi_g4:latest"
 OLLAMA_URL = "http://localhost:11434/api/chat"
-OLLAMA_TEMPERATURE = 0.4
+OLLAMA_TEMPERATURE = 0.7
 
-STT_MODEL = "base"
+STT_MODEL = "small"
 
 PIPER_MODEL = BASE_DIR / "assets" / "piper_model" / "pt_BR-faber-medium.onnx"
 PIPER_CONFIG = BASE_DIR / "assets" / "piper_model" / "pt_BR-faber-medium.onnx.json"

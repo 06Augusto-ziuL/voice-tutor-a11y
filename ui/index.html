@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Papoi – Tutor Escolar Acessível por Voz</title>
+<link rel="stylesheet" href="/ui/style.css">
+</head>
+<body>
+<div id="app">
+
+  <header>
+    <h1>🎓 Papoi – Tutor Escolar Acessível por Voz</h1>
+    <p>Seu tutor escolar inteligente, sempre pronto para ajudar.</p>
+  </header>
+
+  <div id="main">
+
+    <div id="chat-panel">
+      <div id="messages">
+        <div id="placeholder">
+          <div class="icon">🎓</div>
+          <h2>Olá! 👋</h2>
+          <p>Sou o Papoi, seu tutor escolar por voz.<br>Como posso te ajudar hoje?</p>
+          <div id="suggestions">
+            <button class="suggestion-btn" onclick="usarSugestao('Explicar um conteúdo')">📖 Explicar um conteúdo</button>
+            <button class="suggestion-btn" onclick="usarSugestao('Resolver exercício')">📐 Resolver exercício</button>
+            <button class="suggestion-btn" onclick="usarSugestao('Revisar texto')">✍️ Revisar texto</button>
+            <button class="suggestion-btn" onclick="usarSugestao('Tirar dúvida')">💡 Tirar dúvida</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="input-area">
+        <div id="transcription-preview"></div>
+
+        <div id="input-row">
+          <button id="mic-btn" title="Gravar áudio" onclick="toggleMic()">🎤</button>
+          <textarea
+            id="text-input"
+            placeholder="Digite sua mensagem..."
+            rows="1"
+            onkeydown="onKeyDown(event)"
+            oninput="autoResize(this)"
+          ></textarea>
+          <button id="send-btn" title="Enviar" onclick="enviarMensagem()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="player-panel" class="hidden">
+      <h2>🎵 Ouvir resposta</h2>
+      <p class="subtitle">Clique no play para ouvir a resposta do Papoi.</p>
+
+      <div id="waveform-container">
+        <canvas id="waveform-canvas"></canvas>
+      </div>
+
+      <button id="play-btn" onclick="togglePlay()">▶</button>
+
+      <div id="audio-controls">
+        <div id="time-display"><span id="time-cur">0:00</span>&nbsp;/&nbsp;<span id="time-tot">0:00</span></div>
+        <input type="range" id="progress-bar" min="0" max="100" value="0" oninput="seekAudio(this.value)" />
+        <select id="speed-select" onchange="setSpeed(this.value)">
+          <option value="0.75">0.75x</option>
+          <option value="1" selected>1.0x</option>
+          <option value="1.25">1.25x</option>
+          <option value="1.5">1.5x</option>
+          <option value="2">2.0x</option>
+        </select>
+      </div>
+
+      <div id="player-info">
+        Você pode ouvir quantas vezes quiser.<br>Ajuste a velocidade se preferir.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<audio id="audio-el" preload="auto"></audio>
+
+<script src="/ui/script.js">
+</script>
+</body>
+</html>
