@@ -149,7 +149,7 @@ ADAPTADORES = {
 EXECUCAO = {
     "id":           "E24",
     "provedor":     "ollama",       # ollama | gemini | openai | groq
-    "modelo":       "papoi_g4:latest",
+    "modelo":       "papoi_q4:latest",
     "temperatura":  0.7,
     "prompt_versao":"v1.1",
     "camada":       "local", # local | api_gratuita | comercial

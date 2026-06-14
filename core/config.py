@@ -2,7 +2,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-OLLAMA_MODEL = "papoi_g4:latest"
+OLLAMA_MODEL = "papoi_q4:latest"
 OLLAMA_URL = "http://localhost:11434/api/chat"
 OLLAMA_TEMPERATURE = 0.7
 
