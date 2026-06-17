@@ -3,7 +3,6 @@ import subprocess
 from core.config import PIPER_MODEL, PIPER_CONFIG, PIPER_LENGTH_SCALE, PIPER_SENTENCE_SILENCE,AUDIO_OUTPUT
 
 def limpar_markdown(texto: str) -> str:
-    # 1. Remove Markdown clássico (já estava no seu código)
     texto = re.sub(r'\*+', '', texto)
     texto = re.sub(r'#+\s*', '', texto)
     texto = re.sub(r'\[([^\]]+)\]\([^\)]+\)', r'\1', texto)
